@@ -257,7 +257,7 @@ Formatting:
 
 ## Sample Discord Alert Output
 
-Below is an example of the kind of Markdown alert this pipeline should produce. The LLM should output similar structure but tailored to the CVE.
+Below is an example of the kind of Markdown alert this pipeline should produce. The LLM should output a similar structure but tailored to the CVE.
 
 ```
 **CVE-2026-XXXX** — Critical (CVSS: 9.1)
@@ -292,13 +292,10 @@ Remediation Example (iptables):
 ```bash
 # Block inbound access to the vulnerable endpoint from the internet
 iptables -A INPUT -p tcp --dport 80 -m string --string "/api/upload" --algo bm -j DROP
-```
 
+```
 References:
 - https://nvd.nist.gov/vuln/detail/CVE-2026-XXXX
-```
-
----
 
 ## Key SOC Analyst Takeaways
 
